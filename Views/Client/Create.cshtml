@@ -1,0 +1,27 @@
+﻿
+@model Loja01.Models.ClientViewModel
+
+<form>
+    <div class="card">
+
+        <div class="card-header">
+            <h5>Create a new client</h5>
+        </div>
+
+        <div class="card-body">
+            <label>Name</label>
+            <input type="text" class="form-control" asp-for="Name" name="Name"/>
+            
+            <label>Email</label>
+            <input type="text" class="form-control" asp-for="Email" name="Email" />
+            
+            <label>Phone</label>
+            <input type="text" class="form-control" asp-for="Phone" name="Phone" />
+        </div>
+
+        <div class="card-footer">
+            <input type="submit" value="Send"/>
+        </div>
+
+    </div>
+</form>
