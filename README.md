@@ -6,7 +6,10 @@ To honor the book titled Desenvolvimento em Camadas com C# .NET, this project is
 
 Running this project will show two main links within the bootstrap menu: 
 
+![alt text](https://camachojunior.com.br/tmp/Loja01-menuClients.png)
 Clients: a page to show a list of clients;
+
+![alt text](https://camachojunior.com.br/tmp/Loja01-menuNewClient.png)
 Create a new Client: a form to create a new client.
 
 ### Exercises to practice the MVC pattern
