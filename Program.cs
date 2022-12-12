@@ -1,3 +1,7 @@
+using System.Collections;
+
+
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -25,3 +29,32 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
+
+class Test : IEnumerable
+{
+    Test[] Items = null;
+    int freeIndex = 0;
+    public String Name { get; set; }
+    public string Surname { get; set; }
+    public Test()
+    {
+        Items = new Test[10];
+    }
+    public void Add(Test item)
+    {
+        Items[freeIndex] = item;
+        freeIndex++;
+    }
+    // IEnumerable Member  
+    public IEnumerator GetEnumerator()
+    {
+        foreach (object o in Items)
+        {
+            if (o == null)
+            {
+                break;
+            }
+            yield return o;
+        }
+    }
+}
